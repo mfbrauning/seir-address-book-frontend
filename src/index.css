@@ -32,6 +32,7 @@ code {
 .main-card img {
   border-radius: 10px;
   max-width: 140px;
+  max-height: 140px;
 }
 .nav a {
   padding: 10px;

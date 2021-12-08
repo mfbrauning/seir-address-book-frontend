@@ -1,43 +1,65 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import AllContacts from "./pages/AllContacts"
+import SingleContact from "./pages/SingleContact"
+import Footer from "./components/footer"
+import Navigation from "./components/navigation"
 
-function App() {
-  const [count, setCount] = useState(0)
+import { useState, useEffect } from "react"
+import { Route, Routes } from "react-router-dom"
+
+function App(props) {
+
+  ////////////////////
+  // Style Objects
+  ////////////////////
+
+  
+
+  ///////////////
+  // State & Other Variables
+  ///////////////
+  
+  const url = "https://fb-address-book-backend.herokuapp.com/contacts/"
+
+  const [contacts, setContacts] = useState([])
+
+ 
+
+  //////////////
+  // Functions
+  //////////////
+
+  const getContacts = async () => {
+    const response = await fetch(url)
+    const data = await response.json()
+    setContacts(data)
+  }
+
+
+  
+
+  
+  //////////////
+  // useEffects
+  //////////////
+
+  useEffect(() => {
+    getContacts()
+  }, [])
+
+ 
+  //////////////////////////
+  // Returned JSX
+  //////////////////////////
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
+      <Navigation/>
+      
+      <Routes>
+        <Route path="/" element={<AllContacts contacts={contacts} getContacts={getContacts} url={url}/>}/>
+        <Route path="/contact/:id" element={<SingleContact contacts={contacts} getContacts={getContacts} url={url}/>}/>
+      </Routes>
+      <Footer/>
     </div>
   )
 }

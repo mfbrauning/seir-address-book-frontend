@@ -12,9 +12,6 @@ function App(props) {
   // Style Objects
   ////////////////////
 
-  const app = {
-    display: "flex"
-  }
 
   ///////////////
   // State & Other Variables
@@ -54,7 +51,7 @@ function App(props) {
   //////////////////////////
 
   return (
-    <div className="App" style={app}>
+    <div className="App">
       <Navigation/>
       <Routes>
         <Route path="/contacts" element={<AllContacts contacts={contacts} getContacts={getContacts} url={url}/>}/>

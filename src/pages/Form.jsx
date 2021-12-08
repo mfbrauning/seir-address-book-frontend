@@ -29,6 +29,7 @@ function Form({initialContact, handleSubmit, buttonLabel}){
                 placeholder="Name"
                 onChange={handleChange}
             />
+            <br/>
             <input
                 type="text"
                 value={formData.birthday}
@@ -36,6 +37,7 @@ function Form({initialContact, handleSubmit, buttonLabel}){
                 placeholder="Birthday"
                 onChange={handleChange}
             />
+            <br/>
             <input
                 type="text"
                 value={formData.email}
@@ -43,6 +45,7 @@ function Form({initialContact, handleSubmit, buttonLabel}){
                 placeholder="Email"
                 onChange={handleChange}
             />
+            <br/>
             <input
                 type="text"
                 value={formData.phone}
@@ -50,6 +53,7 @@ function Form({initialContact, handleSubmit, buttonLabel}){
                 placeholder="Phone"
                 onChange={handleChange}
             />
+            <br/>
             <input
                 type="text"
                 value={formData.image}
@@ -57,6 +61,7 @@ function Form({initialContact, handleSubmit, buttonLabel}){
                 placeholder="Image URL"
                 onChange={handleChange}
             />
+            <br/>
             <input type="submit" value={buttonLabel}/>
         </form>)
 }

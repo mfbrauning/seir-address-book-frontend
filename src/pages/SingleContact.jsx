@@ -17,10 +17,7 @@ function SingleContact(props){
         image: contact.image
     }
 
-    const singleContact = {
-        width: "70vh",
-        padding: "20px"
-      }
+    
     ///////////
     // state
     ///////////
@@ -56,7 +53,7 @@ function SingleContact(props){
 
     return (
         <>
-        <div style={singleContact}>
+        <div class="single-contact">
             <h1>{contact.name}</h1>
             <h2>{contact.birthday}</h2>
             <h2>{contact.phone}</h2>
@@ -70,8 +67,6 @@ function SingleContact(props){
                 <br/>
                 <Form initialContact={editContact} handleSubmit={updateContacts} buttonLabel="update contact"/>
             </Modal>
-            <br/>
-            <Link to="/contacts"><button>Go Back</button></Link>
         </div>
         </>
     )

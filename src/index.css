@@ -12,8 +12,248 @@ code {
     monospace;
 }
 
+
+.App {
+  display: flex;
+}
+
+.main-card {
+  text-align: center;
+  margin: 10px auto 40px auto;
+  width: 80%;
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.main-card img {
+  border-radius: 10px;
+  max-width: 140px;
+}
+.nav a {
+  padding: 10px;
+  margin: 10px;
+  color: white;
+}
+
+.nav h1{
+  padding: 10px 15px;
+  color: white;
+}
+
+.nav {
+  height: 100vh;
+  width: 25%;
+  background-color:#95bba9;
+  margin: 0px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.all-contacts {
+  position: absolute;
+  right: 0px;
+  height:auto;
+  width: 70%;
+  padding: 80px 20px 20px 20px;
+}
+
+.all-contacts-title {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 82%;
+  padding: 10px 10px 0 10px;
+}
+
+.all-contacts-title > h1 {
+  display: flex;
+  align-items: center;
+  margin: 0px;
+  padding-left: 10px;
+}
+
+.all-contacts-title button {
+  height: 30px;
+  margin: 10px 10px;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #527F64;
+  border: none;
+  color: white
+}
+
+.main-card button {
+  height: 30px;
+  margin: 10px 0;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #88C0A6;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+.single-contact {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  border-radius: 10px;
+  width: 50%;
+  padding: 20px;
+  max-width: 500px;
+  margin-left: 35%;
+  margin-top: 5%;
+  position: fixed;
+  left:0;
+}
+
+.single-contact button {
+  height: 30px;
+  margin: 10px 0;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #527F64;
+  border: none;
+  color: white
+}
+
+.single-contact img {
+  width: 50%;
+  
+}
+
+.main-card-right{
+  display: flex;
+  align-items:flex-end;
+  padding: 10px 20px;
+}
+
+.main-card-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: 20px;
+  text-align: left;
+}
+
 .modal-background {
-  background-color: red;
   width: 100vw;
   height: 100vh;
+  background-color: #527f64af;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    max-width: 90%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  }
+
+.modal-content button {
+  height: 30px;
+  margin: 10px 0;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #88C0A6;
+  border: none;
+}
+
+form {
+  text-align: center;
+}
+
+input[type=text]{
+  margin: 2px;
+  width: 70%;
+}
+
+input[type=submit]{
+  height: 30px;
+  margin: 10px 0;
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #88C0A6;
+  border: none;
+  line-height: 2px;
+} 
+
+input[type=submit]:hover{
+  cursor: pointer;
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .App{
+    display: flex;
+    flex-direction: column;
+  }
+  .nav {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    height: 7%;
+    top: 0;
+    background-color:#95bba9;
+    margin: 0px;
+  }
+  .nav a {
+    padding: 20px;
+    margin: 10px;
+    color: white;
+  }
+  
+  .nav h1{
+    padding: 10px 15px;
+    color: white;
+  }
+  .all-contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+  }
+
+  .single-contact {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    border-radius: 10px;
+    width: 70%;
+    padding: 20px;
+    max-width: 500px;
+    margin: 10%;
+
+  }
+
 }

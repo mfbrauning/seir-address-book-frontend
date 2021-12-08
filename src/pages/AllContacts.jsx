@@ -23,23 +23,16 @@ function AllContacts(props){
         props.getContacts()
     }
 
-    const allContacts = {
-      width: "70vh",
-      padding: "20px"
-    }
-
-    const h1 = {
-        textAlign: "center",
-        margin: "10px",
-      };
 
       
     const [isOpen, setOpen] = useState(false)
 
     return (
-        <div style={allContacts}>
-        <h1 style={h1}>Contacts</h1>
-        <button onClick={() => setOpen(true)}>Add Contact</button>
+        <div class="all-contacts">
+        <div class="all-contacts-title">
+          <h1>Contacts</h1>
+          <button onClick={() => setOpen(true)}>Add Contact</button>
+        </div>
         <Modal isOpen={isOpen} close={() => setOpen(false)}>
                 <h1>Add Contact</h1>
                 <Form initialContact={nullContact} handleSubmit={addContacts} buttonLabel="create contact"/>

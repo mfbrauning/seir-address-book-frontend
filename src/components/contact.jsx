@@ -4,20 +4,22 @@ function Contact({contact}){
     //////////////////
     // Style Objects
     //////////////////
-    const div = {
-        textAlign: "center",
-        border: "3px solid",
-        margin: "10px auto",
-        width: "80%",
-    };
+
+
 
 
     return (
-        <div style={div}>
-            <Link to={`/contacts/${contact.id}`}>
-                <h1>{contact.name}</h1>
-            </Link>
-            <h2>{contact.birthday}</h2>
+        <div class="main-card">
+            <div class="main-card-left">
+                {contact.name}
+                <br/>
+                <img alt="contact image" src={contact.image}/>
+            </div>
+            <div class="main-card-right">
+                <Link to={`/contacts/${contact.id}`}>
+                    <button>View Contact</button>
+                </Link>
+            </div>
         </div>
     )
 }

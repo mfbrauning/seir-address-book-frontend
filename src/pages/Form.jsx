@@ -17,7 +17,7 @@ function Form({initialContact, handleSubmit, buttonLabel}){
     const handleSubmission = (event) => {
         event.preventDefault()
         handleSubmit(formData)
-        navigate("/")
+        navigate("/contacts")
     }
 
     return (

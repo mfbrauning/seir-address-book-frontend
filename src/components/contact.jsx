@@ -14,7 +14,7 @@ function Contact({contact}){
 
     return (
         <div style={div}>
-            <Link to={`/contact/${contact.id}`}>
+            <Link to={`/contacts/${contact.id}`}>
                 <h1>{contact.name}</h1>
             </Link>
             <h2>{contact.birthday}</h2>

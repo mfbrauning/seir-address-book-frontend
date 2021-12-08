@@ -17,6 +17,10 @@ function SingleContact(props){
         image: contact.image
     }
 
+    const singleContact = {
+        width: "70vh",
+        padding: "20px"
+      }
     ///////////
     // state
     ///////////
@@ -43,23 +47,16 @@ function SingleContact(props){
             method: "delete"
         })
         props.getContacts()
-        navigate("/")
+        navigate("/contacts")
     }
 
     
-    ////////////////////
-    // Styles
-    ///////////////////
-    const div = {
-        textAlign: "center",
-        border: "3px solid green",
-        width: "80%",
-        margin: "30px auto",
-    };
+   
+   
 
     return (
         <>
-        <div style={div}>
+        <div style={singleContact}>
             <h1>{contact.name}</h1>
             <h2>{contact.birthday}</h2>
             <h2>{contact.phone}</h2>
@@ -74,7 +71,7 @@ function SingleContact(props){
                 <Form initialContact={editContact} handleSubmit={updateContacts} buttonLabel="update contact"/>
             </Modal>
             <br/>
-            <Link to="/"><button>Go Back</button></Link>
+            <Link to="/contacts"><button>Go Back</button></Link>
         </div>
         </>
     )

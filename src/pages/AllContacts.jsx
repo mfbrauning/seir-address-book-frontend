@@ -23,6 +23,11 @@ function AllContacts(props){
         props.getContacts()
     }
 
+    const allContacts = {
+      width: "70vh",
+      padding: "20px"
+    }
+
     const h1 = {
         textAlign: "center",
         margin: "10px",
@@ -32,7 +37,7 @@ function AllContacts(props){
     const [isOpen, setOpen] = useState(false)
 
     return (
-        <div>
+        <div style={allContacts}>
         <h1 style={h1}>Contacts</h1>
         <button onClick={() => setOpen(true)}>Add Contact</button>
         <Modal isOpen={isOpen} close={() => setOpen(false)}>

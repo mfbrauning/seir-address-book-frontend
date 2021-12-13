@@ -65,7 +65,7 @@ function SingleContact(props){
             <Modal isOpen={isOpen} close={() => setOpen(false)}>
                 <h1>Edit Contact</h1>
                 <br/>
-                <Form initialContact={editContact} handleSubmit={updateContacts} buttonLabel="update contact"/>
+                <Form initialContact={editContact} handleSubmit={updateContacts} buttonLabel="update contact" close={() => setOpen(false)}/>
             </Modal>
         </div>
         </>

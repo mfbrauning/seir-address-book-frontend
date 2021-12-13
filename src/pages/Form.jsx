@@ -2,7 +2,7 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 
 
-function Form({initialContact, handleSubmit, buttonLabel}){
+function Form({initialContact, handleSubmit, buttonLabel, isOpen, close}){
     const navigate = useNavigate()
 
     // form
@@ -17,7 +17,7 @@ function Form({initialContact, handleSubmit, buttonLabel}){
     const handleSubmission = (event) => {
         event.preventDefault()
         handleSubmit(formData)
-        navigate("/contacts")
+        close()
     }
 
     return (

@@ -53,6 +53,7 @@ code {
   position: fixed;
   top: 0;
   left: 0;
+  z-index:1;
 }
 
 .all-contacts {
@@ -214,6 +215,77 @@ button:hover{
   cursor: pointer;
 }
 
+.carousel {
+  width: 60%;
+  height: 700px;
+  background-color: aqua;
+  margin-left: 35%;
+  margin-top: 5%;
+}
+
+
+.carousel-inner {
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+}
+
+.carousel-inner .left{
+  flex: 5%;
+  height: 100%;
+  background-color: #527f64ad;
+  display: grid;
+  place-items: center;
+  color: white;
+  cursor: pointer;
+}
+
+.carousel-inner .center {
+  flex: 80%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: justify;
+  text-align-last: center;
+}
+.carousel-inner .right{
+  flex: 5%;
+  height: 100%;
+  background-color: #527f64ad;
+  display: grid;
+  place-items: center;
+  color: white;
+  cursor: pointer;
+}
+
+.carousel-inner .left:hover{
+  background-color: #527F64;
+}
+
+.carousel-inner .right:hover{
+  background-color: #527F64;
+}
+
+.see-all {
+  height: 30px;
+  margin: 10px 0;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #527f64a2;
+  border: none;
+  color: white
+}
+
+.see-all:hover {
+  background-color: #527F64;
+}
 @media screen and (max-width: 600px) {
   .App{
     display: flex;
@@ -224,7 +296,7 @@ button:hover{
     align-items: center;
     position: fixed;
     width: 100vw;
-    height: 7%;
+    height: 10%;
     top: 0;
     background-color:#95bba9;
     margin: 0px;
@@ -237,6 +309,7 @@ button:hover{
   
   .nav h1{
     padding: 10px 15px;
+    font-size: 20px;
     color: white;
   }
   .all-contacts {
@@ -246,6 +319,11 @@ button:hover{
     align-items: center;
     width: 90%;
   }
+  .carousel {
+    width: 80%;
+    height: 500px;
+    margin: 180px auto;
+  }
 
   .single-contact {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
@@ -253,7 +331,7 @@ button:hover{
     width: 70%;
     padding: 20px;
     max-width: 500px;
-    margin: 10%;
+    margin: 180px 10%;
 
   }
 

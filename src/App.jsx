@@ -1,6 +1,6 @@
 import AllContacts from "./pages/AllContacts"
 import SingleContact from "./pages/SingleContact"
-import Footer from "./components/footer"
+import HomePage from "./pages/HomePage"
 import Navigation from "./components/navigation"
 
 import { useState, useEffect } from "react"
@@ -54,6 +54,7 @@ function App(props) {
     <div className="App">
       <Navigation/>
       <Routes>
+        <Route path="/" element={<HomePage contacts={contacts}/>}/>
         <Route path="/contacts" element={<AllContacts contacts={contacts} getContacts={getContacts} url={url}/>}/>
         <Route path="/contacts/:id" element={<SingleContact contacts={contacts} getContacts={getContacts} url={url}/>}/>
       </Routes>

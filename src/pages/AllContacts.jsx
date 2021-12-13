@@ -35,7 +35,7 @@ function AllContacts(props){
         </div>
         <Modal isOpen={isOpen} close={() => setOpen(false)}>
                 <h1>Add Contact</h1>
-                <Form initialContact={nullContact} handleSubmit={addContacts} buttonLabel="create contact"/>
+                <Form initialContact={nullContact} handleSubmit={addContacts} buttonLabel="create contact" isOpen={isOpen} close={() => setOpen(false)}/>
         </Modal>
         {props.contacts.map((contact) => <Contact contact={contact} key={contact.id}/>)}
         </div>

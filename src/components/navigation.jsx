@@ -5,7 +5,7 @@ function Navigation(props){
  
     
     return (
-        <div class="nav">
+        <div className="nav">
             <div>
                 <h1>Address Book</h1>
             </div>

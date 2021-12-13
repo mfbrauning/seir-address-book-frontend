@@ -13,11 +13,6 @@ An address book web app where a user can create a list of contacts with their in
 - As a user I can edit a contact
 - As a user I can delete a contact
 
-## Wireframe
-
-<img width="600px" src="img1.png" />
-<br/>
-<img width="600px" src="img2.png" />
 
 ## Components
 
@@ -28,6 +23,7 @@ An address book web app where a user can create a list of contacts with their in
 - AllContacts (Page)
 - SingleContact (Page)
 - HomePage (Page)
+
 
 ## Components Architecture
 

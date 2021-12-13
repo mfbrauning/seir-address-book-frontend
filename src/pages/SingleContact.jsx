@@ -1,7 +1,7 @@
 import { Link, useParams, useNavigate } from "react-router-dom"
 import { useEffect, useState } from "react"
 import Modal from "../components/Modal"
-import Form from "./Form"
+import Form from "../components/Form"
 
 function SingleContact(props){
     const navigate = useNavigate()

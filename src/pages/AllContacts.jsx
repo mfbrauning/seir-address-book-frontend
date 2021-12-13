@@ -1,6 +1,6 @@
-import Contact from "../components/contact"
+import Contact from "../components/Contact"
 import Modal from "../components/Modal";
-import Form from "./Form";
+import Form from "../components/Form";
 import { useState } from "react"
 
 function AllContacts(props){

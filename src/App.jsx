@@ -1,7 +1,7 @@
 import AllContacts from "./pages/AllContacts"
 import SingleContact from "./pages/SingleContact"
 import HomePage from "./pages/HomePage"
-import Navigation from "./components/navigation"
+import Navigation from "./components/Navigation"
 
 import { useState, useEffect } from "react"
 import { Route, Routes } from "react-router-dom"
@@ -58,7 +58,6 @@ function App(props) {
         <Route path="/contacts" element={<AllContacts contacts={contacts} getContacts={getContacts} url={url}/>}/>
         <Route path="/contacts/:id" element={<SingleContact contacts={contacts} getContacts={getContacts} url={url}/>}/>
       </Routes>
-      {/* <Footer/> */}
     </div>
   )
 }

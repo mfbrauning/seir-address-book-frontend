@@ -27,6 +27,7 @@ An address book web app where a user can create a list of contacts with their in
 
 ## Components Architecture
 
+```
 -> App
   -> Navigation
   -> Routes
@@ -38,6 +39,7 @@ An address book web app where a user can create a list of contacts with their in
     -> SingleContacts
       -> Modal
         -> Form
+```
 
 
 ## List of Technologies
